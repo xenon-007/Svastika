@@ -103,5 +103,3 @@ def analyze_frame():
     # No face detected
     return jsonify({"posture_status": "Bad Posture (No Face Detected)"})
 
-if __name__ == '__main__':
-    app.run(debug=True)
