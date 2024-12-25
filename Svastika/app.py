@@ -3,7 +3,8 @@ import cv2
 import numpy as np
 import mediapipe as mp
 import os
-app = Flask(__name__, template_folder='templates/welcome.html')
+
+app = Flask(__name__, template_folder='templates')
 
 # Initialize MediaPipe Face Mesh
 mp_face_mesh = mp.solutions.face_mesh
