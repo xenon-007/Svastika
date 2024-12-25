@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import cv2
 import numpy as np
 import mediapipe as mp
-
+import os
 app = Flask(__name__, template_folder='templates/welcome.html')
 
 # Initialize MediaPipe Face Mesh
@@ -104,5 +104,5 @@ def analyze_frame():
     return jsonify({"posture_status": "Bad Posture (No Face Detected)"})
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 10000))  # Default to 5000 if not set
-    app.run(host="0.0.0.0", port=port)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
